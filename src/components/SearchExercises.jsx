@@ -41,6 +41,7 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
       setExercises(searchedExercises);
     }
   };
+
   return (
     <Stack alignItems="center" mt="37px" justifyContent="center" p="20px">
       <Typography
@@ -64,7 +65,7 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
           onChange={(e) => setSearch(e.target.value.toLowerCase())}
           placeholder="Search Exercises"
           type="text"
-        ></TextField>
+        />
         <Button
           className="search-btn"
           sx={{
@@ -85,8 +86,9 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
       <Box sx={{ position: "relative", width: "100%", p: "20px" }}>
         <HorizontalScrollbar
           data={bodyParts}
-          bodyPart={bodyPart}
+          bodyParts
           setBodyPart={setBodyPart}
+          bodyPart={bodyPart}
         />
       </Box>
     </Stack>
